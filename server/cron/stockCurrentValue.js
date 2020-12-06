@@ -3,6 +3,10 @@
 const Listing = require('../models/listing');
 const logger = require('pino')();
 
+/**
+ * This cron job is used to get the updated data  every 4 sec and pass it to client using socket connection
+ */
+
 const stockCurrentValue = async () => {
 
     try {

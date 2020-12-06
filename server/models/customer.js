@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
 
+/**
+ * Customer schema to store customer details
+ */
+
 const CustomerSchema = mongoose.Schema({
     customerId: { type: String, require: true },
     name: String,

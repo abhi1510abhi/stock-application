@@ -24,6 +24,10 @@ app.use(cors());
 
 app.use('/action', serviceRouter);
 
+/**
+ * Creating socket connection
+ */
+
 io.on("connection", (socket) => {
     logger.info("user is connected");
 
@@ -36,6 +40,9 @@ io.on("connection", (socket) => {
 
 })
 
+/**
+ * Connecting to DB
+ */
 
 mongoose.connect(process.env.MONGODB_URI).then(() => {
     logger.info("Connected to database");
@@ -43,6 +50,9 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
     logger.error(`Error while connecting to db ${err}`);
 });
 
+/**
+ * Start listening at port 3000
+ */
 
 http.listen(port, () => {
     logger.info(`Server is running at port ${port}`);

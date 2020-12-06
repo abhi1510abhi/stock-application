@@ -2,6 +2,10 @@
 const Customer = require('../models/customer');
 const logger = require('pino')();
 
+/**
+ * customerInfo api is used for getting customer data
+ */
+
 const customerInfo = async (req, res) => {
     try {
         logger.info(`Inside customerInfo controller`);
@@ -15,6 +19,10 @@ const customerInfo = async (req, res) => {
         return res.status(500).json({ status: false, customerData: {} })
     }
 }
+
+/**
+ * buy api is used for executing buy in stock market
+ */
 
 const buy = async (req, res) => {
     try {
@@ -44,6 +52,11 @@ const buy = async (req, res) => {
         return res.status(500).json({ status: false, message: "unable to proceed with your order! :C", customerData: {} })
     }
 }
+
+/**
+ * sell api is used for executing sell in stock market
+ */
+
 const sell = async (req, res) => {
     logger.info(`Inside sell controller`);
     try {
