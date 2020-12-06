@@ -14,6 +14,7 @@ To Run it in local
 5 - once all the dependency is installed for client and server then below query to run it
 
 server
+
 npm start
 
 client
