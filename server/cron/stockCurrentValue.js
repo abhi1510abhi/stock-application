@@ -1,6 +1,7 @@
 
 
 const Listing = require('../models/listing');
+const logger = require('pino')();
 
 const stockCurrentValue = async () => {
 
@@ -20,7 +21,7 @@ const stockCurrentValue = async () => {
 
         return realTimeData || [];
     } catch (e) {
-        console.log(e.message);
+        logger.error(`Error while running cron job ${e.message}`);
     }
 }
 

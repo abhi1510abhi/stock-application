@@ -122,7 +122,7 @@ function App() {
         })
         .then((res) => {
           const { status = false, customerData = {} } = res.data;
-          console.log(res.data)
+
           if (status) {
             const { holdings = [] } = customerData;
             setPaymentHistory(holdings);
