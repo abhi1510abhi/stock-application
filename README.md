@@ -9,6 +9,10 @@ To Run it in local
 4 - create .env file in server and provide the env
 
 Screenshots
+![Screenshot from 2020-12-06 18-07-23](https://user-images.githubusercontent.com/47599526/101281462-01b3ae00-37f5-11eb-98e3-6a1b4a1b8fd4.png)
+
+![Screenshot from 2020-12-06 18-07-37](https://user-images.githubusercontent.com/47599526/101281465-02e4db00-37f5-11eb-8ad7-fbbd3e9088de.png)
+
 
 ![Screenshot from 2020-12-06 18-07-55](https://user-images.githubusercontent.com/47599526/101281307-3d01ad00-37f4-11eb-8e96-ade5a33d1251.png)
 
