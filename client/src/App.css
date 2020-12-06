@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  margin: 2%;
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  color: white;
+  padding: 1%;
+}
+
+.App-listing {
+
+  width: 90%;
+  margin: auto;
+
+}
+
+.App-history {
+  width: 90%;
+  margin: auto;
+  margin-top: 3%;
+border: 2px solid;
+padding: 5px;
+}
+
+.App-actions {
+  margin: 1%;
+float: right;
+}
+
+.App-footer {
+  position:absolute;
+
+   width:98%;
+   background-color: #f1f1f1;
+   text-align: center;
+}
