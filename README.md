@@ -4,9 +4,22 @@ MERN Application to list stock market details and fetch market updated value eve
 To Run it in local
 
 1 -clone this procject
+
 2- go to server folder and give npm i and let it install the dependency
+
 3  go to client folder and give npm i and let it install the dependency
+
 4 - create .env file in server and provide the env
+
+5 - once all the dependency is installed for client and server then below query to run it
+
+server
+npm start
+
+client
+
+npm start
+
 
 Screenshots
 ![Screenshot from 2020-12-06 18-07-23](https://user-images.githubusercontent.com/47599526/101281462-01b3ae00-37f5-11eb-98e3-6a1b4a1b8fd4.png)
