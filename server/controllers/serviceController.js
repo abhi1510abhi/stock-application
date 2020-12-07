@@ -24,6 +24,43 @@ const customerInfo = async (req, res) => {
 }
 
 /**
+ * Register api to register new customer
+ */
+
+const register = async (req, res) => {
+
+    try {
+        logger.info(`Inside Register controller`);
+        const { username = "", password = "", name } = req.body;
+        if (username && password && name) {
+
+            const data = new Usercredentials({
+                customerId: username,
+                password
+            })
+            await data.save();
+
+            const customerData = new Customer({
+                customerId: username,
+                password,
+                name,
+                holdings: [],
+                wishlist: [],
+                dmatStatus: "Active"
+            })
+            await customerData.save();
+            return res.status(200).json({ status: true, message: "customer created" });
+
+        }
+        return res.status(500).json({ status: false, message: "" });
+    } catch (e) {
+        logger.error(`error while calling Register api ${e.message}`);
+        return res.status(500).json({ status: false, message: "" })
+    }
+
+}
+
+/**
  * Login api used to check credentials
  */
 
@@ -127,6 +164,7 @@ const sell = async (req, res) => {
 
 module.exports = {
     customerInfo,
+    register,
     login,
     buy,
     sell
