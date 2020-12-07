@@ -28,14 +28,8 @@ Screenshots
 
 ![Screenshot from 2020-12-07 19-23-52](https://user-images.githubusercontent.com/47599526/101359266-07c39080-38c2-11eb-8745-d672a3187907.png)
 
-![Screenshot from 2020-12-06 18-07-23](https://user-images.githubusercontent.com/47599526/101281462-01b3ae00-37f5-11eb-98e3-6a1b4a1b8fd4.png)
+![Screenshot from 2020-12-07 19-32-15](https://user-images.githubusercontent.com/47599526/101359996-0d6da600-38c3-11eb-8d1d-c39997b851f7.png)
 
-![Screenshot from 2020-12-06 18-07-37](https://user-images.githubusercontent.com/47599526/101281465-02e4db00-37f5-11eb-8ad7-fbbd3e9088de.png)
+![Screenshot from 2020-12-07 19-32-27](https://user-images.githubusercontent.com/47599526/101360002-0e9ed300-38c3-11eb-9609-a3bdc115d871.png)
 
-
-![Screenshot from 2020-12-06 18-07-55](https://user-images.githubusercontent.com/47599526/101281307-3d01ad00-37f4-11eb-8e96-ade5a33d1251.png)
-
-
-![Screenshot from 2020-12-06 18-08-10](https://user-images.githubusercontent.com/47599526/101281309-3ecb7080-37f4-11eb-805f-de06f5ab2cac.png)
-
-![Screenshot from 2020-12-06 18-08-29](https://user-images.githubusercontent.com/47599526/101281311-3ffc9d80-37f4-11eb-98ae-dc26de2ea398.png)
+![Screenshot from 2020-12-07 19-32-38](https://user-images.githubusercontent.com/47599526/101360005-0f376980-38c3-11eb-9cfe-459d15a68daa.png)
