@@ -16,8 +16,12 @@ const CustomerSchema = mongoose.Schema({
         stockName: String,
         value: Number,
         shares: Number,
-        action: String
+        action: String,
+        createdAt: Date
     }]
+}, {
+    collection: 'customers',
+    timestamps: true
 });
 
 module.exports = mongoose.model('customers', CustomerSchema);

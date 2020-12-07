@@ -6,6 +6,7 @@ const bodyParser = require("body-parser");
 const cron = require("node-cron");
 require('dotenv/config');
 const logger = require('pino')();
+const session = require("express-session");
 
 const { stockCurrentValue } = require('./cron/stockCurrentValue');
 const serviceRouter = require("./routes/serviceRoute");
@@ -21,6 +22,18 @@ const io = require("socket.io")(http, {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
+
+/**
+ * Initializing session 
+ */
+
+app.use(
+    session({
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false
+    })
+);
 
 app.use('/action', serviceRouter);
 

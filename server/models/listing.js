@@ -9,6 +9,9 @@ const ListingSchema = mongoose.Schema({
     stockName: String,
     currentVal: Number,
     totalHoldings: String
+}, {
+    collection: 'listings',
+    timestamps: true
 });
 
 module.exports = mongoose.model('listings', ListingSchema);

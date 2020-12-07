@@ -1,6 +1,9 @@
 
 const Customer = require('../models/customer');
+const Usercredentials = require("../models/usercredentials");
 const logger = require('pino')();
+const moment = require('moment');
+const jwt = require('jsonwebtoken');
 
 /**
  * customerInfo api is used for getting customer data
@@ -21,6 +24,38 @@ const customerInfo = async (req, res) => {
 }
 
 /**
+ * Login api used to check credentials
+ */
+
+
+const login = async (req, res) => {
+    try {
+        logger.info(`Inside Login controller`);
+        const { username = "", password = "" } = req.body;
+        if (username && password) {
+            let authToken = "";
+            jwt.sign({
+                username,
+                password
+            }, process.env.JWT_SECRET, (err, token) => {
+                authToken = token;
+            })
+            const data = await Usercredentials.find({
+                customerId: username,
+                password
+            }).lean();
+            if (data.length == 1) {
+                return res.status(200).json({ status: true, customerId: username, authToken });
+            }
+        }
+        return res.status(500).json({ status: false, customerId: "", authToken: "" });
+    } catch (e) {
+        logger.error(`error while calling Login api ${e.message}`);
+        return res.status(500).json({ status: false, customerId: "", authToken: "" })
+    }
+}
+
+/**
  * buy api is used for executing buy in stock market
  */
 
@@ -34,7 +69,8 @@ const buy = async (req, res) => {
             value: currentVal,
             shares: Number(requestedShare),
             action: "buy",
-            stockName
+            stockName,
+            createdAt: moment.utc().toDate()
         }
 
         const customerData = await Customer.findOneAndUpdate({
@@ -67,7 +103,8 @@ const sell = async (req, res) => {
             stockName,
             value: currentVal,
             shares: requestedShare,
-            action: "sell"
+            action: "sell",
+            createdAt: moment.utc().toDate()
         }
 
         const customerData = await Customer.findOneAndUpdate({
@@ -90,6 +127,7 @@ const sell = async (req, res) => {
 
 module.exports = {
     customerInfo,
+    login,
     buy,
     sell
 }
